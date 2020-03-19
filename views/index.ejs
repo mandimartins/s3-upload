@@ -1,0 +1,13 @@
+<form action="/upload" method="post" enctype="multipart/form-data">
+  <input type="file" name="foto" />
+  <button>Enviar</button>
+</form>
+
+<table>
+  <% arquivos.forEach( arquivo => { %>
+  <tr>
+    <td><%= arquivo.name %></td>
+    <td><a href="/ver/<%= arquivo.id %>">Ver arquivo</a></td>
+  </tr>
+  <% }) %>
+</table>
